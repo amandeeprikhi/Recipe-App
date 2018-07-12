@@ -9,9 +9,9 @@
 
       </section>
     </div>
-    <div class="col-md-8 card mb-4 box-shadow" style="width: = 18rem;">
-      <h4><%= recipe.name %></h4>
-      <p><%= truncate(recipe.description, length: 150) %></p>
+    <div class="col-md-9 card mb-4 box-shadow" style="width: = 18rem;">
+      <h4><%= link_to recipe.name.capitalize, recipe_path(recipe) %></h4>
+      <p><%= truncate(recipe.description.capitalize, length: 150) %></p>
       <p>
         <span class="quiet">
           <sm>Created <%= time_ago_in_words(recipe.created_at) %> ago</sm>
