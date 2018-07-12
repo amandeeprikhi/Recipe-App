@@ -1,0 +1,22 @@
+<h1>SITE UNDER DEVELOPMENT</h1>
+<h1 align="center">Listing all Recipes</h1>
+<hr/>
+
+<% @recipes.each do |recipe| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="center">
+
+      </section>
+    </div>
+    <div class="col-md-8 card mb-4 box-shadow" style="width: = 18rem;">
+      <h4><%= recipe.name %></h4>
+      <p><%= truncate(recipe.description, length: 150) %></p>
+      <p>
+        <span class="quiet">
+          <sm>Created <%= time_ago_in_words(recipe.created_at) %> ago</sm>
+        </span>
+      </p>
+    </div>
+  </div>
+<% end %>
